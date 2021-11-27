@@ -1,0 +1,428 @@
+/* Common Rules Start */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+:root {
+    /* Text */
+    --Pale-Violet: hsl(276, 100%, 81%); /* (sub-heading at the top of the app UI) */
+    --Moderate-Violet: hsl(276, 55%, 52%); /* (chat on the left) */
+    --Desaturated-Dark-Violet: hsl(271, 15%, 43%); /* (chat on the right) */
+    --Grayish-Blue: hsl(206, 6%, 79%); /* (placeholder text) */
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%); /* (main heading) */
+    --Dark-Grayish-Violet: hsl(270, 7%, 64%); /* (paragraph) */
+
+    /* Gradients */
+    /* These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+
+    /* Secondary */
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet: hsl(270, 20%, 96%); /* (app background) */
+    --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%); /* (submit button background) */
+    --Very-Light-Magenta: hsl(289, 100%, 72%); /* (radio button outline) */
+}
+p {
+    color: var(--Dark-Grayish-Violet);
+}
+/* Common Rules End */
+/* Main Section Start */
+main {
+    min-height: 100vh;
+    background-color: var(--Light-Grayish-Violet);
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-bg {
+    height: 80vh;
+    background-image: linear-gradient(to bottom, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    border-radius: 0 0 80% 50%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.bottom-bg {
+    height: 80vh;
+    background-color: rgb(240, 236, 236);
+    border-radius: 70% 50% 0 0;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+/* Main Section End */
+/* Chat App & Summary Container Section Start */
+.content {
+    position: relative;
+    z-index: 999;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+/* Chat App & Summary Container Setion End */
+/* Chat App Section Start */
+.chat-app {
+    padding: 15px;
+    background-color: var(--White);
+    border-radius: 25px;
+    position: relative;
+    animation-name: app-animation;
+    animation-duration: 3s;
+    animation-timing-function: cubic-bezier(0.165, 0.8, 0.4, 1);
+}
+@keyframes app-animation {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+.main-bg {
+    background-color: var(--Light-Grayish-Violet);
+    border-radius: 10px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+.user-info {
+    background-image: linear-gradient(to left, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    padding: 35px 15px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--White);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+.user-info .white-bg {
+    background-color: var(--White);
+    width: 60%;
+    height: 36px;
+    border-radius: 18px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.user-info i {
+    font-size: 15px;
+    cursor: pointer;
+}
+.user-info img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+}
+.user-info div {
+    width: 75%;
+}
+.user-info div h1 {
+    font-size: 14px;
+    font-weight: 700;
+}
+.user-info div p {
+    font-size: 13px;
+    font-weight: 400;
+}
+.chat {
+    padding: 15px 10px;
+}
+.chat .right-chat, .chat .left-chat {
+    font-size: 12px;
+    font-weight: 400;
+    max-width: 60%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.chat .left-chat {
+    background-color: rgba(160, 160, 160, 0.239);
+    color: var(--Moderate-Violet);
+}
+.chat .right-chat {
+    background-color: var(--White);
+    color: var(--Desaturated-Dark-Violet);
+}
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.right-chat-imgs {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+.right-chat-imgs img {
+    margin-left: 10px;
+    width: 50px;
+    height: auto;
+    border-radius: 8px;
+}
+.price-plan {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    background-image: linear-gradient(to left, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    padding: 5px 10px;
+    width: 60%;
+    color: var(--White);
+    border-bottom-left-radius: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.price-plan span {
+    font-size: 18px;
+    font-weight: 500;
+}
+.price-plan div input {
+    appearance: none;
+}
+.price-plan div label::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: relative;
+    top: 4px;
+    right: 5px;
+    background-color: transparent;
+    border: 1px solid var(--Very-Light-Magenta);
+}
+.price-plan div input:checked + label::before {
+    background-color: var(--White);
+    border: none;
+}
+.input-massage {
+    padding: 0 10px 10px;
+    position: relative;
+}
+.input-massage input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--White);
+    padding-left: 25px;
+}
+.input-massage input::placeholder {
+    color: var(--Grayish-Blue);
+}
+.input-massage input:focus {
+    outline: none;
+}
+.btn {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: var(--Very-Dark-Desaturated-Violet);
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+.btn i {
+    color: var(--White);
+}
+/* Chat App Section End */
+/* Summary Section Start */
+.summary h1 {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--Very-Dark-Desaturated-Violet);
+    margin-bottom: 20px;
+}
+.summary p {
+    line-height: 1.5;
+    font-weight: 400;
+}
+/* Summary Section End */
+/* Responsive Screen Layout */
+/* Small Mobile Screen */
+@media (min-width: 320px) and (max-width: 424px) {
+    /* Main Section Start */
+    main {
+        padding: 15vh 0;
+    }
+    .top-bg {
+        width: 75%;
+        left: -25%;
+    }
+    .bottom-bg {
+        width: 75%;
+        right: -25%;
+    }
+    /* Main Section End */
+    .content {
+        width: 90%;
+    }
+    /* Chat App Section Start */
+    .chat-app {
+        width: 100%;
+    }
+    /* Chat App Section End */
+    /* Summary Section Start */
+    .summary {
+        width: 100%;
+        text-align: center;
+        margin-top: 45px;
+    }
+    /* Summary Section End */
+}
+/* Large Mobile Screen */
+@media (min-width: 425px) and (max-width: 767px) {
+    /* Main Section Start */
+    main {
+        padding: 15vh 0;
+    }
+    .top-bg {
+        width: 75%;
+        left: -30%;
+    }
+    .bottom-bg {
+        width: 75%;
+        right: -30%;
+    }
+    /* Main Section End */
+    .content {
+        width: 85%;
+    }
+    /* Chat App Section Start */
+    .chat-app {
+        width: 100%;
+    }
+    /* Chat App Section End */
+    /* Summary Section Start */
+    .summary {
+        width: 100%;
+        text-align: center;
+        margin-top: 45px;
+    }
+    /* Summary Section End */
+}
+/* Tablet Screen  */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Main Section Start */
+    main {
+        padding: 15vh 0;
+    }
+    .top-bg {
+        width: 60%;
+        left: -30%;
+    }
+    .bottom-bg {
+        width: 60%;
+        right: -30%;
+    }
+    /* Main Section End */
+    .content {
+        width: 70%;
+    }
+    /* Chat App Section Start */
+    .chat-app {
+        width: 70%;
+    }
+    /* Chat App Section End */
+    /* Summary Section Start */
+    .summary {
+        width: 75%;
+        text-align: center;
+        margin-top: 45px;
+    }
+    /* Summary Section End */
+}
+/* Large Screen */
+@media (min-width: 1024px) and (max-width: 1199px) {
+    /* Main Section Start */
+    main {
+        padding: 15vh;
+    }
+    .top-bg {
+        width: 35%;
+        left: -10%;
+    }
+    .bottom-bg {
+        width: 35%;
+        right: -15%;
+    }
+    /* Main Section End */
+    .content {
+        width: 90%;
+    }
+    /* Chat App Section Start */
+    .chat-app {
+        width: 45%;
+    }
+    /* Chat App Section End */
+    /* Summary Section Start */
+    .summary {
+        width: 45%;
+    }
+    /* Summary Section End */
+}
+/* Extre Large Screen */
+@media (min-width: 1200px) and (max-width: 1920px) {
+    /* Main Section Start */
+    .top-bg {
+        width: 35%;
+        left: -8%;
+    }
+    .bottom-bg {
+        width: 35%;
+        right: -15%;
+    }
+    /* Main Section End */
+    .content {
+        width: 70%;
+    }
+    /* Chat App Section Start */
+    .chat-app {
+        width: 35%;
+    }
+    /* Chat App Section End */
+    /* Summary Section Start */
+    .summary {
+        width: 40%;
+    }
+    /* Summary Section End */
+}
+/* 2Extre Large Screen */
+@media (min-width: 1921px) {
+    /* Main Section Start */
+    .top-bg {
+        width: 35%;
+        left: -10%;
+    }
+    .bottom-bg {
+        width: 35%;
+        right: -15%;
+    }
+    /* Main Section End */
+    .content {
+        width: 40%;
+    }
+    /* Chat App Section Start */
+    .chat-app {
+        width: 40%;
+    }
+    /* Chat App Section End */
+    /* Summary Section Start */
+    .summary {
+        width: 40%;
+    }
+    /* Summary Section End */
+}
