@@ -127,7 +127,7 @@ main {
 .user-info div {
     width: 75%;
 }
-.user-info div h2 {
+.user-info div h1 {
     font-size: 14px;
     font-weight: 700;
 }
