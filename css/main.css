@@ -127,7 +127,7 @@ main {
 .user-info div {
     width: 75%;
 }
-.user-info div h1 {
+.user-info div h2 {
     font-size: 14px;
     font-weight: 700;
 }
@@ -240,7 +240,7 @@ main {
 }
 /* Chat App Section End */
 /* Summary Section Start */
-.summary h1 {
+.summary h2 {
     font-size: 30px;
     font-weight: 500;
     color: var(--Very-Dark-Desaturated-Violet);
